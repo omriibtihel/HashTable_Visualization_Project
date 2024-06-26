@@ -1,4 +1,40 @@
-# HashtableFrontend
+# Hashtable
+
+Overview
+
+This project provides a comprehensive visualization of a hash table using Angular for the frontend and Spring Boot for the backend. The project aims to help users understand how a hash table works by allowing them to interact with it through a graphical interface. Users can add, remove, and search for words in the hash table, and see the changes reflected in real-time on the canvas.
+
+Features
+
+Interactive Hash Table Visualization: Add, remove, and search for words in the hash table.
+Real-Time Updates: See the hash table update in real-time as you interact with it.
+Smooth Animations: Watch the hash table's cells being animated as they are added or removed.
+Color-Coded Rows: Each row of the hash table is color-coded for better visual distinction.
+
+
+Technologies Used
+
+Frontend
+Angular: For building the dynamic and interactive user interface.
+Canvas API: For rendering the hash table visualization.
+
+Backend
+Spring Boot: For creating a robust and scalable RESTful API.
+Hibernate: For ORM (Object-Relational Mapping).
+H2 Database: For easy setup and use of an in-memory database during development.
+How It Works
+
+Frontend (Angular)
+
+Component Structure: The main component, AppComponent, handles the user interactions and canvas drawing.
+Canvas Drawing: The drawRect function is responsible for rendering the hash table on an HTML canvas. It uses requestAnimationFrame for smooth animations.
+Service Integration: HashTableService communicates with the backend API to perform CRUD operations on the hash table.
+
+Backend (Spring Boot)
+
+RESTful API: Provides endpoints for adding, removing, and searching words, as well as retrieving the entire hash table.
+Hash Table Implementation: Uses a custom hash table implementation, with entities for rows (HashtableRowEntity) and cells (HashtableCellEntity).
+Persistence: Data is persisted using JPA repositories (HashtableRowRepository and HashtableCellRepository).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
 
